@@ -24,6 +24,6 @@ func main() {
 ```
 
 ```shell
-[welcome sitemon]$ SITEMON_LOG_LEVEL=INFO SITEMON_TGTOKEN=qwe SITEMON_SENTRYDSN=sentry:dsn SITEMON_TGCHAT=-123 go run
+[welcome sitemon]$ SITEMON_LOGLEVEL=INFO SITEMON_TGTOKEN=qwe SITEMON_SENTRYDSN=sentry:dsn SITEMON_TGCHAT=-123 go run
 main.go
 ```
