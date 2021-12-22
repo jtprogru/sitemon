@@ -32,8 +32,6 @@ type Config struct {
 }
 
 func BuildConfig(configPath string) (*Config, error) {
-	// create config structure
-	var c Config
 	// Open config file
 	file, err := os.Open(configPath)
 	if err != nil {
@@ -43,6 +41,9 @@ func BuildConfig(configPath string) (*Config, error) {
 
 	// Init new YAML decode
 	d := yaml.NewDecoder(file)
+
+	// create config structure
+	var c Config
 
 	// Start YAML decoding from file
 	if err := d.Decode(&c); err != nil {
