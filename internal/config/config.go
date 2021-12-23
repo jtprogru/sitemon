@@ -27,10 +27,7 @@ type Config struct {
 		Token string `yaml:"token" envconfig:"SITEMON_TGTOKEN"`
 		Chat  string `yaml:"chat" envconfig:"SITEMON_TGCHAT"`
 	} `yaml:"telegram"`
-	Monitors struct {
-		JTProg  MonitorOpts `yaml:"jtprog"`
-		HTTPBin MonitorOpts `yaml:"httpbin"`
-	} `yaml:"monitors"`
+	Monitors map[string]MonitorOpts `yaml:"monitors"`
 }
 
 // BuildConfig creates a configuration structure using a config file
